@@ -107,9 +107,13 @@ app.add_middleware(
 def root(set: list[str] = Query(default=[])):
     return load_config(set)
 
-
 @app.get("/config")
 def get_config(set: list[str] = Query(default=[])):
+    return load_config(set)
+
+
+@app.get("/effective-config")
+def effective_config(set: list[str] = Query(default=[])):
     return load_config(set)
 
 
