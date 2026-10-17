@@ -1,0 +1,5 @@
+port: 8000
+workers: 4
+debug: false
+log_level: warning
+api_key: yaml-demo-key
